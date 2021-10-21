@@ -1,0 +1,25 @@
+{
+  "name": "electron-react-typescript-webpack",
+  "version": "1.0.0",
+  "description": "electron-react-typescript-webpack",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/funnyzak/electron-react-typescript-webpack.git"
+  },
+  "keywords": [
+    "electron",
+    "react",
+    "typescript",
+    "webpack"
+  ],
+  "author": "eric <silenceace@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/funnyzak/electron-react-typescript-webpack/issues"
+  },
+  "homepage": "https://github.com/funnyzak/electron-react-typescript-webpack#readme"
+}
