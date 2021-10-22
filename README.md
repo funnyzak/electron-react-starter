@@ -4,4 +4,14 @@
 
 ## 环境
 
-- 使用的Node为v15.14.0。
+- 使用的Node为v12.22.0。
+
+## 使用
+
+- [Babel Config](https://babel.docschina.org/docs/en/7.0.0/configuration/)
+- [EsLint](https://eslint.org/docs/user-guide/configuring/)
+- [eslintignore-file](https://eslint.org/docs/user-guide/configuring/ignoring-code#the-eslintignore-file)
+- [TSconfig](https://www.typescriptlang.org/tsconfig/)
+- [npmrc](https://docs.npmjs.com/cli/v7/configuring-npm/npmrc)
+- [gitignore](https://git-scm.com/docs/gitignore)
+- [webpack](https://webpack.docschina.org/guides/getting-started/)
