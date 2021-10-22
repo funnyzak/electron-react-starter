@@ -28,7 +28,12 @@ module.exports = {
       },
       {
         test: /\.tsx?$/,
-        use: ['ts-loader'], // tsconfig.json 设置 "target": "es6" ，再用 babel 转换一次
+        use: ['babel-loader', 'ts-loader'], // tsconfig.json 设置 "target": "es6" ，再用 babel 转换一次
+        exclude: /node_modules/,
+      },
+      {
+        test: /src\/renderer\/[^\s]+\.js$/i, // src/renderer 下所有js
+        use: ['babel-loader'],
         exclude: /node_modules/,
       },
       {

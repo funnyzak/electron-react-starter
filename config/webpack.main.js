@@ -9,7 +9,7 @@ module.exports = {
     rules: [
       // {
       //   test: /\.tsx?$/,
-      //   use: ['ts-loader'], // tsconfig.json 设置 "target": "es6" ，再用 babel 转换一次
+      //   use: ['babel-loader', 'ts-loader'], // tsconfig.json 设置 "target": "es6" ，再用 babel 转换一次
       //   exclude: /node_modules/,
       // },
     ],
