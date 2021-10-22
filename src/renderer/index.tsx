@@ -1,9 +1,12 @@
-import * as React from "react";
-import * as ReactDOM from "react-dom";
+import React from 'react';
+import * as ReactDOM from 'react-dom'
 
-import Hello from "./components/Hello";
+import Hello from './components/Hello/index';
 
-ReactDOM.render(
-  <Hello name="TypeScript" enthusiasmLevel={10} />,
-  document.getElementById('root') as HTMLElement
-);
+const App = () => (
+  <div>
+    <Hello name="TypeScript" enthusiasmLevel={10} />
+  </div>
+)
+
+ReactDOM.render(<App />, document.getElementById('root'))

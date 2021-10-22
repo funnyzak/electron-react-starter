@@ -1,6 +1,6 @@
-import { app, BrowserWindow, Menu } from 'electron'
+import { app, BrowserWindow } from 'electron'
 
-let browerWindow: BrowserWindow
+let browerWindow;
 
 function createWindow() {
   // https://www.electronjs.org/zh/docs/latest/api/browser-window
@@ -8,24 +8,23 @@ function createWindow() {
     width: 1024,
     height: 768,
     fullscreenable: false,
-    maximizable:false,
+    maximizable: false,
     movable: true,
     webPreferences: {
-      nodeIntegration: true
+      nodeIntegration: true,
+      contextIsolation: false,
     },
   })
 
   const devMode = process.env.NODE_ENV === 'development'
-  const winURL = devMode ? `http://localhost:1010` : `file://${__dirname}/index.html`
+  const winURL = devMode ? 'http://0.0.0.0:2088' : `file://${__dirname}/index.html`
   browerWindow.loadURL(winURL)
 
   if (devMode) {
     browerWindow.resizable = true
     browerWindow.webContents.openDevTools()
   }
-  
 }
-
 
 // 这段程序将会在 Electron 结束初始化
 // 和创建浏览器窗口的时候调用
@@ -40,11 +39,9 @@ app.on('ready', () => {
   })
 })
 
-
 // 除了 macOS 外，当所有窗口都被关闭的时候退出程序。 There, it's common
 // for applications and their menu bar to stay active until the user quits
 // explicitly with Cmd + Q.
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') app.quit()
 })
-

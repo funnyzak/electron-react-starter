@@ -48,6 +48,7 @@
         "no-plusplus": "off",
         "camelcase": "off",
         "import/extensions": "off",
+        "no-use-before-define": "warn",
         "react/jsx-filename-extension": [
             "warn",
             {
