@@ -6,7 +6,16 @@
 
 使用的Node的构建环境为v14.17.0，为避免冲突，最好使用此版本。
 
-## 使用
+## 运行
+
+- 开发：`yarn dev`
+- 构建：`yarn build:windows`
+
+## 打包
+
+- 输出目录：`build`
+
+## 参考
 
 - [Electron](https://electronjs.org/docs)
 - [Babel Config](https://babel.docschina.org/docs/en/7.0.0/configuration/)

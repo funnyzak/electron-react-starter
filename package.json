@@ -2,7 +2,7 @@
   "name": "electron-react-typescript-webpack",
   "version": "1.0.0",
   "description": "electron-react-typescript-webpack",
-  "main": "main.js",
+  "main": "dist/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node ./config/dev.js",
@@ -64,5 +64,26 @@
     "*.{js,jsx,ts,tsx}": [
       "eslint  --fix --cache"
     ]
+  },
+  "build": {
+    "appId": "github.funnyzak.electron",
+    "productName": "electron app",
+    "copyright":"copyright © 2021 eric ",
+    "files": [
+      "dist/**/*"
+    ],
+    "directories": {
+      "output": "build"
+    },
+    "mac": {
+      "icon": "public/icon/icon.icns",
+      "category": "tools"
+    },
+    "win": {
+      "icon": "public/icon/icon.ico"
+    },
+    "linux": {
+      "icon": "public/icon/icons"
+    }
   }
 }
