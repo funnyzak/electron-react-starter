@@ -7,11 +7,8 @@ const WebpackDevServer = require('webpack-dev-server');
 const mainWebpackConfig = require('./webpack.main');
 const rendererWebpackConfig = require('./webpack.renderer');
 
-const env = 'development';
-
 function buildMain() {
   return new Promise((resolve, reject) => {
-    mainWebpackConfig.mode = env;
     const compiler = webpack(mainWebpackConfig);
 
     compiler.watch({}, (err, stats) => {
@@ -25,7 +22,6 @@ function buildMain() {
 }
 
 function buildRenderer() {
-  rendererWebpackConfig.mode = env;
   const compiler = webpack(rendererWebpackConfig);
   const devServerOptions = {
     ...rendererWebpackConfig.devServer,

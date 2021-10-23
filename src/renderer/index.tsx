@@ -5,8 +5,12 @@ import { Hello, Version } from './components';
 
 const App = () => (
   <div>
-    <Hello name="TypeScript" enthusiasmLevel={3} />
     <Version />
+    <div>
+      NODE_ENV:
+      {process.env.NODE_ENV}
+    </div>
+    <Hello name="TypeScript" enthusiasmLevel={3} />
   </div>
 )
 

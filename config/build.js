@@ -3,10 +3,7 @@ const Webpack = require('webpack');
 const mainWebpackConfig = require('./webpack.main');
 const rendererWebpackConfig = require('./webpack.renderer');
 
-const env = 'production';
-
 function buildMain() {
-  mainWebpackConfig.mode = env;
   return new Promise((resolve, reject) => {
     const compiler = Webpack(mainWebpackConfig);
     compiler.watch({}, (err) => {
@@ -18,7 +15,6 @@ function buildMain() {
   });
 }
 function buildRenderer() {
-  rendererWebpackConfig.mode = env;
   return new Promise((resolve, reject) => {
     const compiler = Webpack(rendererWebpackConfig);
     compiler.watch({}, (err) => {
