@@ -3098,7 +3098,7 @@ engine.io@~6.0.0:
     engine.io-parser "~5.0.0"
     ws "~8.2.3"
 
-enhanced-resolve@^5.0.0, enhanced-resolve@^5.8.3:
+enhanced-resolve@^5.0.0, enhanced-resolve@^5.7.0, enhanced-resolve@^5.8.3:
   version "5.8.3"
   resolved "https://registry.nlark.com/enhanced-resolve/download/enhanced-resolve-5.8.3.tgz#6d552d465cce0423f5b3d718511ea53826a7b2f0"
   integrity sha1-bVUtRlzOBCP1s9cYUR6lOCansvA=
@@ -7444,7 +7444,16 @@ ts-loader@^9.2.6:
     micromatch "^4.0.0"
     semver "^7.3.4"
 
-tsconfig-paths@^3.11.0:
+tsconfig-paths-webpack-plugin@^3.5.1:
+  version "3.5.1"
+  resolved "https://registry.npm.taobao.org/tsconfig-paths-webpack-plugin/download/tsconfig-paths-webpack-plugin-3.5.1.tgz#e4dbf492a20dca9caab60086ddacb703afc2b726"
+  integrity sha1-5Nv0kqINypyqtgCG3ay3A6/CtyY=
+  dependencies:
+    chalk "^4.1.0"
+    enhanced-resolve "^5.7.0"
+    tsconfig-paths "^3.9.0"
+
+tsconfig-paths@^3.11.0, tsconfig-paths@^3.9.0:
   version "3.11.0"
   resolved "https://registry.nlark.com/tsconfig-paths/download/tsconfig-paths-3.11.0.tgz?cache=0&sync_timestamp=1629839709860&other_urls=https%3A%2F%2Fregistry.nlark.com%2Ftsconfig-paths%2Fdownload%2Ftsconfig-paths-3.11.0.tgz#954c1fe973da6339c78e06b03ce2e48810b65f36"
   integrity sha1-lUwf6XPaYznHjgawPOLkiBC2XzY=

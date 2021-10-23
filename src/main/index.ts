@@ -1,8 +1,8 @@
 import { app, BrowserWindow } from 'electron'
 
-const config = require('../../config')
+const config = require('@/config')
 
-let browerWindow;
+let browerWindow: BrowserWindow;
 
 function createWindow() {
   // https://www.electronjs.org/zh/docs/latest/api/browser-window

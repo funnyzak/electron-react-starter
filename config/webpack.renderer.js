@@ -6,6 +6,8 @@ const DashboardPlugin = require('webpack-dashboard/plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 // https://www.webpackjs.com/plugins/copy-webpack-plugin/
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+// https://www.npmjs.com/package/tsconfig-paths-webpack-plugin
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 module.exports = {
   mode: process.env.NODE_ENV || 'production',
@@ -90,6 +92,9 @@ module.exports = {
     alias: {
       '@': path.resolve(__dirname, '../src/renderer/'),
     },
+    plugins: [new TsconfigPathsPlugin({
+      extensions: ['.ts', '.tsx'],
+    })],
     mainFiles: ['index', 'main'],
     extensions: ['.ts', '.tsx', '.js', '.json', '.html'],
   },

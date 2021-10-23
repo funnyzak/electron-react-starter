@@ -1,9 +1,11 @@
 const path = require('path');
 
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+
 module.exports = {
   mode: process.env.NODE_ENV || 'production',
   entry: {
-    main: path.resolve(process.cwd(), 'src/main/index.js'),
+    main: path.resolve(process.cwd(), 'src/main/index.ts'),
   },
   module: {
     rules: [
@@ -13,6 +15,11 @@ module.exports = {
         exclude: /node_modules/,
       },
     ],
+  },
+  resolve: {
+    plugins: [new TsconfigPathsPlugin({
+      extensions: ['.ts', '.tsx'],
+    })],
   },
   output: {
     path: path.resolve(process.cwd(), 'dist'),

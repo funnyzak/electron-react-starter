@@ -2,11 +2,15 @@
   "compilerOptions": {
     // 允许从没有设置默认导出的模块中默认导入。这并不影响代码的输出，仅为了类型检查。
     "allowSyntheticDefaultImports": true,
-    "baseUrl": ".",
-    "rootDir": ".",
-    "outDir": "./dist/",
     "sourceMap": true,
+    "allowJs": true,
     "target": "es6",
+    "strictNullChecks": true,
+    "forceConsistentCasingInFileNames": true, // 不允许对同一个文件使用不一致格式的引用
+    "declaration": true, // 生成相应的.d.ts文件
+    "noUnusedLocals": true, // 报告未使用的本地变量的错误
+    "noUnusedParameters": true, // 报告未使用参数的错误
+    "incremental": true, // 通过从以前的编译中读取/写入信息到磁盘上的文件来启用增量编译
     "jsx": "react",
     // Turning on noImplicitAny however TypeScript will issue an error whenever it would have inferred any:
     "noImplicitAny": true,
@@ -19,16 +23,19 @@
     "removeComments": true,
     // Node.js’ CommonJS implementation
     "moduleResolution": "node",
+    // 允许使用 .json 扩展名导入的模块
+    "resolveJsonModule": true, 
+    "baseUrl": ".",
+    "rootDir": ".",
+    "outDir": "./dist/",
     "paths": {
       "@/*": [
         "./src/renderer/*"
-      ]
+      ],
+      "@/package": ["./package.json"],
+      "@/config": ["./config/index.js"],
     }
   },
-  "include": [
-    "./src/**/*",
-    "global.d.ts"
-  ],
   "exclude": [
     "__tests__",
     "node_modules",

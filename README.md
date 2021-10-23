@@ -16,6 +16,7 @@
 
 - `public`：静态资源文件夹
 - `config`：webpack打包配置
+- `config/index.js`: 常用配置
 - `src/main`：electron main进程
 - `src/renderer`：renderer src
   
