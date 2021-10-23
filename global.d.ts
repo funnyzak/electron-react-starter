@@ -10,3 +10,4 @@ declare module '*.sass';
 declare module '*.styl';
 declare module '*.txt';
 declare module '*.html';
+declare module '*.hbs';

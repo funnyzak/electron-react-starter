@@ -1,1 +1,1 @@
-TXT: Hello World
+Hello World
