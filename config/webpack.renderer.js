@@ -25,8 +25,17 @@ module.exports = {
   module: {
     rules: [
       {
+        // https://webpack.docschina.org/guides/asset-modules/
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
+        exclude: /node_modules/,
+        generator: {
+          filename: 'static/[hash][ext][query]',
+        },
+      },
+      {
+        test: /\.(txt|conf)$/i,
+        type: 'asset/source',
         exclude: /node_modules/,
       },
       {
@@ -53,12 +62,19 @@ module.exports = {
       },
       {
         test: /\.html$/i,
-        use: 'html-loader',
+        loader: 'html-loader',
+        options: {
+          minimize: {
+            removeComments: false,
+            collapseWhitespace: false,
+          },
+        },
       },
     ],
   },
   output: {
     path: path.resolve(__dirname, '../dist'),
+    // assetModuleFilename: 'assets/[hash][ext][query]',
     filename: '[name].[hash].bundle.js',
   },
 
