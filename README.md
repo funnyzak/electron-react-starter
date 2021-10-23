@@ -1,5 +1,7 @@
 # Electron React Typescript Webpack
 
+## 说明
+
 基于React Typescript Webpack构建Electron应用脚手架。
 
 - babel语法支持
@@ -9,6 +11,10 @@
 - less 支持
 - hbs文件 模板支持
 - png|svg|jpg|jpeg|gif 引入支持
+
+### 运行
+
+![](public/assets/img/run-demo.png)
   
 ## 环境
 
