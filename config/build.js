@@ -3,6 +3,8 @@ const Webpack = require('webpack');
 const mainWebpackConfig = require('./webpack.main');
 const rendererWebpackConfig = require('./webpack.renderer');
 
+delete rendererWebpackConfig.devtool
+
 function buildMain() {
   return new Promise((resolve, reject) => {
     const compiler = Webpack(mainWebpackConfig);
