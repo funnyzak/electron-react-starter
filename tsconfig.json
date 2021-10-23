@@ -26,7 +26,8 @@
     }
   },
   "include": [
-    "./src/**/*"
+    "./src/**/*",
+    "global.d.ts"
   ],
   "exclude": [
     "__tests__",
