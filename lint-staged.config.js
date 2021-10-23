@@ -9,7 +9,17 @@ module.exports = (allStagedFiles) => {
   if (shFiles.length) {
     return 'printf \'%s\n\' "Script files aren\'t allowed in src directory" >&2'
   }
+
+  const runScripts = []
   const codeFiles = micromatch(allStagedFiles, ['**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx'])
+  if (codeFiles.length > 0) {
+    runScripts.push(`eslint --fix --cache ${codeFiles.join(' ')}`)
+  }
+
   const docFiles = micromatch(allStagedFiles, ['**/*.md'])
-  return [`eslint --fix --cache ${codeFiles.join(' ')}`, `mdl ${docFiles.join(' ')}`]
+  if (docFiles.length > 0) {
+    runScripts.push(`mdl ${docFiles.join(' ')}`)
+  }
+
+  return runScripts
 }

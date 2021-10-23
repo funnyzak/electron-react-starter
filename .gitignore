@@ -2,3 +2,4 @@ dist/
 build/
 .temp/
 node_modules/
+.eslintcache
