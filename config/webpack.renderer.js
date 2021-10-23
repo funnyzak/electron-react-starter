@@ -49,7 +49,7 @@ module.exports = {
       },
       {
         test: /\.less$/i,
-        use: ['style-loader', 'css-loader', 'less-loader'],node-sass
+        use: ['style-loader', 'css-loader', 'less-loader'],
       },
       {
         test: /\.html$/i,
