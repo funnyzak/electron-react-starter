@@ -14,7 +14,7 @@
 
 ### 运行
 
-![](public/assets/img/run-demo.png)
+![run](public/assets/img/run-demo.png)
   
 ## 环境
 
