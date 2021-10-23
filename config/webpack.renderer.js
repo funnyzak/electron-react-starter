@@ -9,6 +9,9 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 // https://www.npmjs.com/package/tsconfig-paths-webpack-plugin
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
+const package = require('../package.json');
+const config = require('.');
+
 module.exports = {
   mode: process.env.NODE_ENV || 'production',
   context: path.join(__dirname, '../src/renderer'),
@@ -54,16 +57,17 @@ module.exports = {
         test: /\.less$/i,
         use: ['style-loader', 'css-loader', 'less-loader'],
       },
-      {
-        test: /\.html$/i,
-        loader: 'html-loader',
-        options: {
-          minimize: {
-            removeComments: false,
-            collapseWhitespace: false,
-          },
-        },
-      },
+      // {
+      //   test: /\.html$/i,
+      //   // https://webpack.docschina.org/loaders/html-loader/
+      //   loader: 'html-loader',
+      //   options: {
+      //     minimize: {
+      //       removeComments: false,
+      //       collapseWhitespace: false,
+      //     },
+      //   },
+      // },
     ],
   },
   output: {
@@ -75,6 +79,10 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, '../src/renderer/index.html'),
+      templateParameters: {
+        package,
+        config,
+      },
     }),
     // 复制public下资源到dist目录
     new CopyWebpackPlugin({
@@ -92,9 +100,12 @@ module.exports = {
     alias: {
       '@': path.resolve(__dirname, '../src/renderer/'),
     },
-    plugins: [new TsconfigPathsPlugin({
-      extensions: ['.ts', '.tsx'],
-    })],
+    // 支持Tsconfig paths
+    plugins: [
+      new TsconfigPathsPlugin({
+        extensions: ['.ts', '.tsx'],
+      }),
+    ],
     mainFiles: ['index', 'main'],
     extensions: ['.ts', '.tsx', '.js', '.json', '.html'],
   },
