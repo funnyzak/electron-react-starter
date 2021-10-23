@@ -1,13 +1,15 @@
 import React from 'react';
 import * as ReactDOM from 'react-dom'
 
-import { Hello, Version } from './components';
+import { Hello, Version, Image } from './components';
+import avatarImg from './assets/img/avatar.png'
 
 const txtExample = require('./assets/source/example.txt')
 
 const App = () => (
   <div>
     <img src="./icon/application.png" alt="appliction icon" />
+    <Image src={avatarImg} />
     <Version />
     <div>
       NODE_ENV:
