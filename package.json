@@ -7,12 +7,13 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "cross-env NODE_ENV=development node ./config/dev.js",
     "dist": "cross-env NODE_ENV=production node ./config/build.js",
-    "build:now":"cross-env electron-builder",
+    "build:now": "cross-env electron-builder",
     "build": "cross-env NODE_ENV=production node ./config/build.js && electron-builder",
     "build:windows": "cross-env NODE_ENV=production node ./config/build.js && electron-builder --win",
     "build:mac": "cross-env NODE_ENV=production node ./config/build.js && electron-builder --mac",
     "build:linux": "cross-env NODE_ENV=production node ./config/build.js && electron-builder --linux",
-    "lint": "eslint --fix ."
+    "lint": "eslint --fix .",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -53,6 +54,7 @@
     "git-revision-webpack-plugin": "^5.0.0",
     "html-loader": "^2.1.2",
     "html-webpack-plugin": "^5.4.0",
+    "husky": "^7.0.4",
     "less": "^4.1.2",
     "less-loader": "^10.2.0",
     "lint-staged": "^11.2.3",
@@ -69,12 +71,12 @@
     "webpack": "^5.59.1",
     "webpack-cli": "^4.9.1",
     "webpack-dashboard": "^3.3.6",
-    "webpack-dev-server": "^4.3.1"
+    "webpack-dev-server": "^4.3.1",
+    "micromatch": "^4.0.4",
+    "markdownlint": "^0.24.0"
   },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "eslint  --fix --cache"
-    ]
+  "dependencies": {
+    "core-js": "^3.18.3"
   },
   "build": {
     "appId": "github.funnyzak.electron",
@@ -94,12 +96,9 @@
       "icon": "public/icon/256x256.ico"
     },
     "linux": {
-      "target":"zip",
+      "target": "zip",
       "category": "Utility",
       "icon": "public/icon/128x128.ico"
     }
-  },
-  "dependencies": {
-    "core-js": "^3.18.3"
   }
 }
