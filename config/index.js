@@ -1,3 +1,4 @@
+// webpack devServer 配置
 const devServiceConfig = {
   host: '0.0.0.0',
   client: {
@@ -18,4 +19,7 @@ const devServiceConfig = {
 
 module.exports = {
   devServiceConfig,
+
+  // 源打包输出路径
+  distOutPutPath: 'dist',
 }

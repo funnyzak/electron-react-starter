@@ -112,7 +112,7 @@ module.exports = {
     ],
   },
   output: {
-    path: path.resolve(__dirname, '../dist'),
+    path: path.resolve(__dirname, `../${config.distOutPutPath}`),
     // assetModuleFilename: 'assets/[hash][ext][query]',
 
     // entry file output name
@@ -145,7 +145,7 @@ module.exports = {
       patterns: [
         {
           from: path.resolve(__dirname, '../public'),
-          to: path.resolve(__dirname, '../dist'),
+          to: path.resolve(__dirname, `../${config.distOutPutPath}`),
         },
       ],
     }),

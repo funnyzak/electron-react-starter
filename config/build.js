@@ -3,6 +3,7 @@ const Webpack = require('webpack')
 const mainWebpackConfig = require('./webpack.main')
 const rendererWebpackConfig = require('./webpack.renderer')
 
+// 不输出调试map
 delete rendererWebpackConfig.devtool
 
 function buildMain() {
