@@ -14,7 +14,7 @@
 
 ## 目录
 
-- `public`：静态资源文件夹，原始输出
+- `public`：静态资源文件夹
 - `config`：webpack打包配置
 - `src/main`：electron main进程
 - `src/renderer`：renderer src
@@ -25,6 +25,7 @@
 - 源构建输出：`yarn dist`
 - 根据当前系统构建：`yarn build`
 - 构建Windows 64：`yarn build:windows`
+- 构建Mac：`yarn build:mac`
 
 ## 打包
 

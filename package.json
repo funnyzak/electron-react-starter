@@ -7,9 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "cross-env NODE_ENV=development node ./config/dev.js",
     "dist": "cross-env NODE_ENV=production node ./config/build.js",
-    "build": "cross-env NODE_ENV=production node ./config/build.js && electron-builder",
-    "lint": "eslint --fix .",
-    "build:windows": "cross-env NODE_ENV=production node ./config/build.js && electron-builder --win --x64"
+    "build": "cross-env NODE_ENV=production node ./config/build.js && electron-builder --x64",
+    "build:windows": "cross-env NODE_ENV=production node ./config/build.js && electron-builder --win --x64",
+    "build:mac": "cross-env NODE_ENV=production node ./config/build.js && electron-builder --mac",
+    "lint": "eslint --fix ."
   },
   "repository": {
     "type": "git",
