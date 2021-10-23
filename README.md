@@ -15,7 +15,7 @@
 ### 运行
 
 ![run](public/assets/img/run-demo.png)
-  
+
 ## 环境
 
 使用的Node的构建版本为 **v14.17.0**，为避免冲突，建议使用此版本。可以使用 ***nvm*** 管理Node版本。
@@ -39,19 +39,19 @@
 - `config/index.js`: 常用配置, edit here
 - `src/main`：electron main进程文件，code here
 - `src/renderer`：renderer src, code here
-  
+
 ## 使用
 
 执行：`yarn install` or `npm install`，然后：
 
-- 开发环境：`yarn dev`
-- Lint格式化：`yarn lint`
-- 源构建输出：`yarn dist`
-- 根据当前系统构建：`yarn build`
-- 基于dist输出，根据当前系统构建：`yarn build:now`
-- 构建Windows二进制：`yarn build:windows`
-- 构建Mac二进制：`yarn build:mac`
-- 构建Linux二进制：`yarn build:mac`
+- 开发环境：`npm run dev`
+- Lint格式化：`npm run lint`
+- 源构建输出：`npm run dist`
+- 根据当前系统构建：`npm run build`
+- 基于dist输出，根据当前系统构建：`npm run build:now`
+- 构建Windows二进制：`npm run build:windows`
+- 构建Mac二进制：`npm run build:mac`
+- 构建Linux二进制：`npm run build:mac`
 
 ## 打包
 
