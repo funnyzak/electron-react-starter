@@ -22,7 +22,7 @@ module.exports = (allStagedFiles) => {
     runScripts.push(`eslint --fix --cache ${codeFiles.join(' ')}`)
   }
 
-  const docFiles = micromatch(allStagedFiles, ['**/*.md'])
+  const docFiles = micromatch(allStagedFiles, ['**/*.md', "'**/*.html'"])
   if (docFiles.length > 0) {
     runScripts.push(`prettier --write ${docFiles.join(' ')}`)
   }
