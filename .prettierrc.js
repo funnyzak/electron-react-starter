@@ -8,7 +8,7 @@ module.exports = {
     // Use single quotes instead of double quotes.
     singleQuote: true,
     // Change when properties in objects are quoted.
-    quoteProps: 'as-needed',
+    quoteProps: 'consistent',
     bracketSpacing: true,
     bracketSameLine: false,
 }
