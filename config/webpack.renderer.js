@@ -14,13 +14,6 @@ module.exports = {
     main: path.resolve(__dirname, '../src/renderer/index.tsx'),
   },
   devtool: 'source-map',
-  devServer: {
-    host: '0.0.0.0',
-    client: {
-      overlay: true,
-    },
-    port: 2088,
-  },
   module: {
     rules: [
       {

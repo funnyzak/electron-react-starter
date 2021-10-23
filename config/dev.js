@@ -3,6 +3,7 @@ const { spawn } = require('child_process');
 const electron = require('electron');
 const webpack = require('webpack');
 const WebpackDevServer = require('webpack-dev-server');
+const config = require('.')
 
 const mainWebpackConfig = require('./webpack.main');
 const rendererWebpackConfig = require('./webpack.renderer');
@@ -25,11 +26,12 @@ function buildRenderer() {
   const compiler = webpack(rendererWebpackConfig);
   const devServerOptions = {
     ...rendererWebpackConfig.devServer,
+    ...config.devServiceConfig,
   };
 
   const server = new WebpackDevServer(devServerOptions, compiler);
   server.startCallback(() => {
-    console.log(`Starting server on http://localhost:${devServerOptions.port}`);
+    console.log(`Starting server on http://${devServerOptions.host}}:${devServerOptions.port}`);
   });
 }
 
