@@ -12,7 +12,7 @@
   
 ## 环境
 
-使用的Node的构建版本为 **v14.17.0**，为避免冲突，建议使用此版本。
+使用的Node的构建版本为 **v14.17.0**，为避免冲突，建议使用此版本。可以使用 ***nvm*** 管理Node版本。
 
 ## 目录
 
@@ -25,6 +25,7 @@
 ## 使用
 
 - 开发环境：`yarn dev`
+- Lint格式化：`yarn lint`
 - 源构建输出：`yarn dist`
 - 根据当前系统构建：`yarn build`
 - 构建Windows 64：`yarn build:windows`

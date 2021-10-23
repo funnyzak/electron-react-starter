@@ -1,8 +1,10 @@
-import { app, BrowserWindow } from 'electron'
+import {
+  app, BrowserWindow,
+} from 'electron'
 
 const config = require('@/config')
 
-let browerWindow: BrowserWindow;
+let browerWindow
 
 function createWindow() {
   // https://www.electronjs.org/zh/docs/latest/api/browser-window

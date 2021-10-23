@@ -11,15 +11,33 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 // https://www.npmjs.com/package/tsconfig-paths-webpack-plugin
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
 
+// https://www.npmjs.com/package/git-revision-webpack-plugin
+const { GitRevisionPlugin } = require('git-revision-webpack-plugin')
+
+const gitRevisionPlugin = new GitRevisionPlugin({
+  branch: true,
+})
+
 const package = require('../package.json')
 const config = require('.')
 
-// 模板参数
+const gitInfo = {
+  VERSION: gitRevisionPlugin.version(),
+  COMMITHASH: gitRevisionPlugin.commithash(),
+  BRANCH: gitRevisionPlugin.branch(),
+  LASTCOMMITDATETIME: gitRevisionPlugin.lastcommitdatetime(),
+}
+
+// 模板参数，应用 index.html、hbs文件
 const templateParameters = {
   // package.json信息
   package,
   // 配置信息
   config,
+  // 进程信息
+  process,
+  // git信息
+  gitInfo,
 }
 
 module.exports = {
@@ -90,10 +108,20 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, '../dist'),
     // assetModuleFilename: 'assets/[hash][ext][query]',
-    filename: '[name].[hash].bundle.js',
+
+    // entry file output name
+    filename: '[name].[git-revision-hash].bundle.js',
+    // filename: '[name].[hash].bundle.js',
+
+    // un entey file output name
+    chunkFilename: '[id].chunk.js',
+
+    // 该选项的值是以 runtime(运行时) 或 loader(载入时) 所创建的每个 URL 为前缀。因此，在多数情况下，此选项的值都会以 / 结束。
+    publicPath: '/',
   },
 
   plugins: [
+    gitRevisionPlugin,
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, '../src/renderer/index.html'),
       templateParameters: {
