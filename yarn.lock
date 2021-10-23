@@ -2538,12 +2538,7 @@ core-js-pure@^3.16.0:
   resolved "https://registry.npmmirror.com/core-js-pure/download/core-js-pure-3.18.3.tgz?cache=0&sync_timestamp=1634062995940&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fcore-js-pure%2Fdownload%2Fcore-js-pure-3.18.3.tgz#7eed77dcce1445ab68fd68715856633e2fb3b90c"
   integrity sha1-fu133M4URato/WhxWFZjPi+zuQw=
 
-core-js@2:
-  version "2.6.12"
-  resolved "https://registry.npmmirror.com/core-js/download/core-js-2.6.12.tgz#d9333dfa7b065e347cc5682219d6f690859cc2ec"
-  integrity sha1-2TM9+nsGXjR8xWgiGdb2kIWcwuw=
-
-core-js@^3.6.5:
+core-js@^3.18.3, core-js@^3.6.5:
   version "3.18.3"
   resolved "https://registry.npmmirror.com/core-js/download/core-js-3.18.3.tgz#86a0bba2d8ec3df860fefcc07a8d119779f01509"
   integrity sha1-hqC7otjsPfhg/vzAeo0Rl3nwFQk=

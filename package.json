@@ -93,6 +93,6 @@
     }
   },
   "dependencies": {
-    "core-js": "2"
+    "core-js": "^3.18.3"
   }
 }

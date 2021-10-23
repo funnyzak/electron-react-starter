@@ -6,7 +6,10 @@ module.exports = function (api) {
     [
       '@babel/preset-env',
       {
-        useBuiltIns: 'entry',
+        // polyfill 操作方式
+        useBuiltIns: 'usage',
+        // 声明corejs版本
+        corejs: '3',
       },
     ],
   ]
