@@ -1,11 +1,12 @@
 import React from 'react';
 import * as ReactDOM from 'react-dom'
 
-import Hello from './components/Hello/index';
+import { Hello, Version } from './components';
 
 const App = () => (
   <div>
-    <Hello name="TypeScript" enthusiasmLevel={10} />
+    <Hello name="TypeScript" enthusiasmLevel={3} />
+    <Version />
   </div>
 )
 
