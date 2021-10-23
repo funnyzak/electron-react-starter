@@ -7,6 +7,7 @@ const txtExample = require('./assets/source/example.txt')
 
 const App = () => (
   <div>
+    <img src="./icon/application.png" alt="appliction icon" />
     <Version />
     <div>
       NODE_ENV:
