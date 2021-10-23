@@ -89,5 +89,8 @@
     "linux": {
       "icon": "public/icon/icons"
     }
+  },
+  "dependencies": {
+    "core-js": "2"
   }
 }
