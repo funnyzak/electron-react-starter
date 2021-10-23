@@ -80,14 +80,11 @@
       "output": "build"
     },
     "mac": {
-      "icon": "public/icon/icon.icns",
+      "icon": "public/icon/application.icns",
       "category": "tools"
     },
     "win": {
-      "icon": "public/icon/icon.ico"
-    },
-    "linux": {
-      "icon": "public/icon/icons"
+      "icon": "public/icon/application.ico"
     }
   },
   "dependencies": {
