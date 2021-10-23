@@ -5,7 +5,7 @@ const DashboardPlugin = require('webpack-dashboard/plugin');
 // https://www.webpackjs.com/plugins/html-webpack-plugin/
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 // https://www.webpackjs.com/plugins/copy-webpack-plugin/
-// const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   mode: process.env.NODE_ENV || 'production',
@@ -19,7 +19,6 @@ module.exports = {
     client: {
       overlay: true,
     },
-    // contentBase: path.resolve(__dirname, '../dist'),
     port: 2088,
   },
   module: {
@@ -82,17 +81,15 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, '../src/renderer/index.html'),
     }),
-    // new CopyWebpackPlugin(
-    //   [
-    //     {
-    //       from: {
-    //         glob: path.resolve(__dirname, '../public'), // 静态资源路径
-    //         dot: true,
-    //       },
-    //       to: path.resolve(__dirname, '../dist'),
-    //     },
-    //   ],
-    // ),
+    // 复制public下资源到dist目录
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, '../public'),
+          to: path.resolve(__dirname, '../dist'),
+        },
+      ],
+    }),
     // webpack-dev-server 强化插件
     new DashboardPlugin(),
   ],
