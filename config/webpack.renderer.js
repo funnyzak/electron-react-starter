@@ -80,7 +80,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, '../src/renderer/index.html'),
       templateParameters: {
+        // package.json信息
         package,
+        // 配置信息
         config,
       },
     }),

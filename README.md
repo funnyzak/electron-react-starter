@@ -44,7 +44,6 @@
 - [gitignore](https://git-scm.com/docs/gitignore)
 - [webpack](https://webpack.docschina.org/guides/getting-started/)
 
-
 ## License
 
 MIT License © 2021 [Eric](https://github.com/funnyzak)

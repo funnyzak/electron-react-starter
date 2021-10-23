@@ -22,7 +22,8 @@
         "react-hooks",
         "import",
         "jsx-a11y",
-        "@typescript-eslint"
+        "@typescript-eslint",
+        "html"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
