@@ -1,6 +1,6 @@
 // webpack devServer 配置
 const devServiceConfig = {
-  host: '0.0.0.0',
+  host: '127.0.0.1',
   client: {
     overlay: true,
   },
@@ -8,12 +8,12 @@ const devServiceConfig = {
   // 代理设置
   proxy: {
     // example: /api/login => http://localhost:3000/login
-    '/api': {
-      target: 'http://localhost:3000',
-      pathRewrite: { '^/api': '' },
-    },
+    // '/api': {
+    //   target: 'http://localhost:3000',
+    //   pathRewrite: { '^/api': '' },
+    // },
     // example: /api2/login => http://localhost:3000/api2/login
-    '/api2': 'http://localhost:3001',
+    // '/api2': 'http://localhost:3001',
   },
 }
 

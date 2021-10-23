@@ -16,7 +16,11 @@ function buildMain() {
       if (err) {
         reject(err)
       }
-      console.log(stats)
+      if (stats.helloworld) {
+        // 统计日志
+        console.log(stats)
+      }
+
       resolve()
     })
   })

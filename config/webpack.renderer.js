@@ -53,6 +53,7 @@ module.exports = {
     main: path.resolve(__dirname, '../src/renderer/index.tsx'),
   },
   devtool: 'source-map',
+  stats: 'errors-only',
   module: {
     rules: [
       {

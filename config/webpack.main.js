@@ -7,6 +7,7 @@ module.exports = {
   entry: {
     main: path.resolve(process.cwd(), 'src/main/index.ts'),
   },
+  stats: 'errors-only',
   module: {
     rules: [
       {
