@@ -7,6 +7,8 @@
 - react支持
 - sass 支持
 - less 支持
+- hbs文件 模板支持
+- png|svg|jpg|jpeg|gif 引入支持
   
 ## 环境
 
