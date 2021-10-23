@@ -16,10 +16,10 @@ module.exports = (allStagedFiles) => {
     runScripts.push(`eslint --fix --cache ${codeFiles.join(' ')}`)
   }
 
-  const docFiles = micromatch(allStagedFiles, ['**/*.md'])
-  if (docFiles.length > 0) {
-    runScripts.push(`mdl ${docFiles.join(' ')}`)
-  }
+  // const docFiles = micromatch(allStagedFiles, ['**/*.md'])
+  // if (docFiles.length > 0) {
+  //   runScripts.push(`eslint --fix --cache ${docFiles.join(' ')}`)
+  // }
 
   return runScripts
 }
