@@ -8,11 +8,17 @@
     "sourceMap": true,
     "target": "es6",
     "jsx": "react",
+    // Turning on noImplicitAny however TypeScript will issue an error whenever it would have inferred any:
     "noImplicitAny": true,
     "noImplicitThis": true,
+    // When enabled, TypeScript will check all code paths in a function to ensure they return a value.
     "noImplicitReturns": true,
+    // 不删除枚举声明 https://www.typescriptlang.org/tsconfig#preserveConstEnums
     "preserveConstEnums": true,
+    // Strips all comments from TypeScript files when converting into JavaScript.
     "removeComments": true,
+    // Node.js’ CommonJS implementation
+    "moduleResolution": "node",
     "paths": {
       "@/*": [
         "./src/renderer/*"
