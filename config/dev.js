@@ -35,7 +35,9 @@ function buildRenderer() {
 
   const server = new WebpackDevServer(devServerOptions, compiler)
   server.startCallback(() => {
-    console.log(`Starting server on http://${devServerOptions.host}}:${devServerOptions.port}`)
+    console.log(
+      `Starting server on http://${devServerOptions.host}:${devServerOptions.port}`,
+    )
   })
 }
 

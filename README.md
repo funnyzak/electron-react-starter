@@ -60,6 +60,10 @@
 -   源构建输出：`./dist`
 -   打包输出目录：`./build`
 
+## 其他
+
+点击这里访问 [基于 typescript 和 webapck 的 React 脚手架应用](https://github.com/funnyzak/react-typescript-webpack-template)。
+
 ## 参考
 
 -   [Electron](https://electronjs.org/docs)
