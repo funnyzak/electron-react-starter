@@ -30,6 +30,8 @@
   
 ## 使用
 
+执行：`yarn install` or `npm install`，然后：
+
 - 开发环境：`yarn dev`
 - Lint格式化：`yarn lint`
 - 源构建输出：`yarn dist`
