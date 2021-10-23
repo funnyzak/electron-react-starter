@@ -23,8 +23,7 @@
         "import",
         "jsx-a11y",
         "@typescript-eslint",
-        "html",
-        "markdown"
+        "html"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
