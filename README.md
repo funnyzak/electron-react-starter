@@ -7,12 +7,18 @@
 - react支持
 - sass 支持
 - less 支持
-- html import 导入支持
-
+  
 ## 环境
 
 使用的Node的构建版本为 **v14.17.0**，为避免冲突，建议使用此版本。
 
+## 目录
+
+- `public`：静态资源文件夹，原始输出
+- `config`：webpack打包配置
+- `src/main`：electron main进程
+- `src/renderer`：renderer src
+  
 ## 使用
 
 - 开发环境：`yarn dev`
