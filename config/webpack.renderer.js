@@ -1,4 +1,7 @@
 const path = require('path')
+
+const Webpack = require('webpack')
+
 // https://handlebarsjs.com/guide
 const Handlebars = require('handlebars')
 
@@ -35,10 +38,13 @@ const templateParameters = {
   // 配置信息
   config,
   // 进程信息
-  process,
+  process: {
+    env: process.env,
+  },
   // git信息
   gitInfo,
 }
+templateParameters.origin = JSON.stringify(templateParameters)
 
 module.exports = {
   mode: process.env.NODE_ENV || 'production',
@@ -122,6 +128,12 @@ module.exports = {
 
   plugins: [
     gitRevisionPlugin,
+    // 全局定义变量，可在代码里直接引用
+    new Webpack.DefinePlugin({
+      ...gitInfo,
+      NODE_ENV: process.env.NODE_ENV,
+      PRODUCTION: process.env.NODE_ENV === 'production',
+    }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, '../src/renderer/index.html'),
       templateParameters: {

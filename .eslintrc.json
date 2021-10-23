@@ -9,7 +9,8 @@
         "serviceworker": true
     },
     "globals": {
-        "BAIDU": "readonly"
+        "PRODUCTION": "readonly",
+        "NODE_ENV": "readonly"
     },
     "extends": [
         "eslint:recommended",
