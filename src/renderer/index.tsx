@@ -3,6 +3,8 @@ import * as ReactDOM from 'react-dom'
 
 import { Hello, Version } from './components';
 
+const txtExample = require('./assets/source/example.txt')
+
 const App = () => (
   <div>
     <Version />
@@ -11,6 +13,7 @@ const App = () => (
       {process.env.NODE_ENV}
     </div>
     <Hello name="TypeScript" enthusiasmLevel={3} />
+    <div>{txtExample}</div>
   </div>
 )
 

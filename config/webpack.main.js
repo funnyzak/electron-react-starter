@@ -7,11 +7,11 @@ module.exports = {
   },
   module: {
     rules: [
-      // {
-      //   test: /\.tsx?$/,
-      //   use: ['babel-loader', 'ts-loader'], // tsconfig.json 设置 "target": "es6" ，再用 babel 转换一次
-      //   exclude: /node_modules/,
-      // },
+      {
+        test: /\.tsx?$/,
+        use: ['babel-loader', 'ts-loader'], // tsconfig.json 设置 "target": "es6" ，再用 babel 转换一次
+        exclude: /node_modules/,
+      },
     ],
   },
   output: {
