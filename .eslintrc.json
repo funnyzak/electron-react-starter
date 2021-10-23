@@ -3,7 +3,6 @@
         "browser": true,
         "es2021": true,
         "node": true,
-        "es6": true,
         "jest": true,
         "mocha": true,
         "amd": true,
@@ -38,7 +37,10 @@
         "sourceType": "module"
     },
     "rules": {
-        "semi": "off",
+        "semi": [
+            "error",
+            "never"
+        ],
         "func-names": "off",
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "warn",

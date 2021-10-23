@@ -1,6 +1,6 @@
 // document https://babel.docschina.org/docs/en/7.0.0/configuration/
 module.exports = function (api) {
-  api.cache(true);
+  api.cache(true)
 
   const presets = [
     [
@@ -9,11 +9,11 @@ module.exports = function (api) {
         useBuiltIns: 'entry',
       },
     ],
-  ];
-  const plugins = [];
+  ]
+  const plugins = []
 
   return {
     presets,
     plugins,
-  };
-};
+  }
+}

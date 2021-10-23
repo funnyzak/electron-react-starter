@@ -2904,7 +2904,7 @@ domhandler@^2.3.0:
   dependencies:
     domelementtype "1"
 
-domhandler@^4.0.0, domhandler@^4.2.0:
+domhandler@^4.0.0, domhandler@^4.2.0, domhandler@^4.2.2:
   version "4.2.2"
   resolved "https://registry.nlark.com/domhandler/download/domhandler-4.2.2.tgz?cache=0&sync_timestamp=1630246778110&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fdomhandler%2Fdownload%2Fdomhandler-4.2.2.tgz#e825d721d19a86b8c201a35264e226c678ee755f"
   integrity sha1-6CXXIdGahrjCAaNSZOImxnjudV8=
@@ -2919,7 +2919,7 @@ domutils@^1.5.1:
     dom-serializer "0"
     domelementtype "1"
 
-domutils@^2.5.2, domutils@^2.6.0:
+domutils@^2.5.2, domutils@^2.6.0, domutils@^2.8.0:
   version "2.8.0"
   resolved "https://registry.nlark.com/domutils/download/domutils-2.8.0.tgz#4437def5db6e2d1f5d6ee859bd95ca7d02048135"
   integrity sha1-RDfe9dtuLR9dbuhZvZXKfQIEgTU=
@@ -3130,6 +3130,11 @@ entities@^2.0.0:
   resolved "https://registry.nlark.com/entities/download/entities-2.2.0.tgz#098dc90ebb83d8dffa089d55256b351d34c4da55"
   integrity sha1-CY3JDruD2N/6CJ1VJWs1HTTE2lU=
 
+entities@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.nlark.com/entities/download/entities-3.0.1.tgz#2b887ca62585e96db3903482d336c1006c3001d4"
+  integrity sha1-K4h8piWF6W2zkDSC0zbBAGwwAdQ=
+
 env-paths@^2.2.0:
   version "2.2.1"
   resolved "https://registry.nlark.com/env-paths/download/env-paths-2.2.1.tgz#420399d416ce1fbe9bc0a07c62fa68d67fd0f8f2"
@@ -3258,6 +3263,13 @@ eslint-module-utils@^2.7.0:
     debug "^3.2.7"
     find-up "^2.1.0"
     pkg-dir "^2.0.0"
+
+eslint-plugin-html@^6.2.0:
+  version "6.2.0"
+  resolved "https://registry.nlark.com/eslint-plugin-html/download/eslint-plugin-html-6.2.0.tgz#715bc00b50bbd0d996e28f953c289a5ebec69d43"
+  integrity sha1-cVvAC1C70NmW4o+VPCiaXr7GnUM=
+  dependencies:
+    htmlparser2 "^7.1.2"
 
 eslint-plugin-import@^2.25.2:
   version "2.25.2"
@@ -4229,6 +4241,16 @@ htmlparser2@^6.1.0:
     domhandler "^4.0.0"
     domutils "^2.5.2"
     entities "^2.0.0"
+
+htmlparser2@^7.1.2:
+  version "7.1.2"
+  resolved "https://registry.nlark.com/htmlparser2/download/htmlparser2-7.1.2.tgz#587923d38f03bc89e03076e00cba2c7473f37f7c"
+  integrity sha1-WHkj048DvIngMHbgDLosdHPzf3w=
+  dependencies:
+    domelementtype "^2.0.1"
+    domhandler "^4.2.2"
+    domutils "^2.8.0"
+    entities "^3.0.1"
 
 http-cache-semantics@^4.0.0:
   version "4.1.0"

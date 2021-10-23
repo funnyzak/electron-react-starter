@@ -45,6 +45,7 @@
 - [npmrc](https://docs.npmjs.com/cli/v7/configuring-npm/npmrc)
 - [gitignore](https://git-scm.com/docs/gitignore)
 - [webpack](https://webpack.docschina.org/guides/getting-started/)
+- [prettier](https://prettier.io/docs/en/index.html)
 
 ## License
 
