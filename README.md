@@ -20,6 +20,18 @@
 
 使用的Node的构建版本为 **v14.17.0**，为避免冲突，建议使用此版本。可以使用 ***nvm*** 管理Node版本。
 
+主要依赖库版本：
+
+- electron: ^15.3.0
+- electron-builder: ^22.13.15
+- eslint: ^7.32.0
+- babel: ^7.15.8
+- css-loader: ^6.4.0
+- less: ^4.1.2
+- sass: ^6.0.1
+- typescript: ^4.4.4
+- webpack: ^5.59.1
+
 ## 目录
 
 - `public`：静态资源文件夹
@@ -36,8 +48,10 @@
 - Lint格式化：`yarn lint`
 - 源构建输出：`yarn dist`
 - 根据当前系统构建：`yarn build`
-- 构建Windows 64：`yarn build:windows`
-- 构建Mac：`yarn build:mac`
+- 基于dist输出，根据当前系统构建：`yarn build:now`
+- 构建Windows二进制：`yarn build:windows`
+- 构建Mac二进制：`yarn build:mac`
+- 构建Linux二进制：`yarn build:mac`
 
 ## 打包
 
@@ -58,4 +72,4 @@
 
 ## License
 
-MIT License © 2021 [Eric](https://github.com/funnyzak)
+MIT License © 2021 [funnyzak](https://github.com/funnyzak)

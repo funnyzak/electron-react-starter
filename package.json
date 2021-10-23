@@ -7,9 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "cross-env NODE_ENV=development node ./config/dev.js",
     "dist": "cross-env NODE_ENV=production node ./config/build.js",
-    "build": "cross-env NODE_ENV=production node ./config/build.js && electron-builder --x64",
-    "build:windows": "cross-env NODE_ENV=production node ./config/build.js && electron-builder --win --x64",
+    "build:now":"cross-env electron-builder",
+    "build": "cross-env NODE_ENV=production node ./config/build.js && electron-builder",
+    "build:windows": "cross-env NODE_ENV=production node ./config/build.js && electron-builder --win",
     "build:mac": "cross-env NODE_ENV=production node ./config/build.js && electron-builder --mac",
+    "build:linux": "cross-env NODE_ENV=production node ./config/build.js && electron-builder --linux",
     "lint": "eslint --fix ."
   },
   "repository": {
@@ -22,7 +24,7 @@
     "typescript",
     "webpack"
   ],
-  "author": "eric <silenceace@gmail.com>",
+  "author": "funnyzak <silenceace@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/funnyzak/electron-react-typescript-webpack/issues"
@@ -85,11 +87,16 @@
       "output": "build"
     },
     "mac": {
-      "icon": "public/icon/application.icns",
-      "category": "tools"
+      "icon": "public/icon/128x128.icns",
+      "category": "Utility"
     },
     "win": {
-      "icon": "public/icon/application.ico"
+      "icon": "public/icon/256x256.ico"
+    },
+    "linux": {
+      "target":"zip",
+      "category": "Utility",
+      "icon": "public/icon/128x128.ico"
     }
   },
   "dependencies": {
