@@ -5,8 +5,6 @@ const Webpack = require('webpack')
 // https://handlebarsjs.com/guide
 const Handlebars = require('handlebars')
 
-// https://github.com/FormidableLabs/webpack-dashboard
-const DashboardPlugin = require('webpack-dashboard/plugin')
 // https://www.webpackjs.com/plugins/html-webpack-plugin/
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 // https://www.webpackjs.com/plugins/copy-webpack-plugin/
@@ -53,6 +51,7 @@ module.exports = {
     main: path.resolve(__dirname, '../src/renderer/index.tsx'),
   },
   devtool: 'source-map',
+  // https://webpack.js.org/configuration/stats/
   stats: 'errors-only',
   module: {
     rules: [
@@ -150,8 +149,6 @@ module.exports = {
         },
       ],
     }),
-    // webpack-dev-server 强化插件
-    new DashboardPlugin(),
   ],
   resolve: {
     alias: {
