@@ -36,6 +36,17 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
+        test: /src\/renderer\/[^\/]+\/[^\/]+\.html$/i, // src/renderer 下所有js
+        // https://webpack.docschina.org/loaders/html-loader/
+        loader: 'html-loader',
+        options: {
+          minimize: {
+            removeComments: false,
+            collapseWhitespace: false,
+          },
+        },
+      },
+      {
         test: /\.tsx?$/,
         use: ['babel-loader', 'ts-loader'], // tsconfig.json 设置 "target": "es6" ，再用 babel 转换一次
         exclude: /node_modules/,
@@ -57,17 +68,6 @@ module.exports = {
         test: /\.less$/i,
         use: ['style-loader', 'css-loader', 'less-loader'],
       },
-      // {
-      //   test: /\.html$/i,
-      //   // https://webpack.docschina.org/loaders/html-loader/
-      //   loader: 'html-loader',
-      //   options: {
-      //     minimize: {
-      //       removeComments: false,
-      //       collapseWhitespace: false,
-      //     },
-      //   },
-      // },
     ],
   },
   output: {
