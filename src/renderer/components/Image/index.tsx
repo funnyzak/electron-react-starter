@@ -12,7 +12,7 @@ const Index: React.FC<IProps> = (props) => {
 };
 
 Index.defaultProps = {
-  styleSet: { width: '64px', height: 'auto' },
+  styleSet: { width: '64px', height: 'auto' }
 };
 
 export default Index;

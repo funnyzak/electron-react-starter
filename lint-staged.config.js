@@ -15,7 +15,7 @@ module.exports = (allStagedFiles) => {
     '**/*.js',
     '**/*.jsx',
     '**/*.ts',
-    '**/*.tsx',
+    '**/*.tsx'
   ]);
   if (codeFiles.length > 0) {
     runScripts.push(`prettier --write ${codeFiles.join(' ')}`);
@@ -29,7 +29,7 @@ module.exports = (allStagedFiles) => {
     '**/*.css',
     '**/*.less',
     '**/*.scss',
-    '**/*.sass',
+    '**/*.sass'
   ]);
   if (docFiles.length > 0) {
     runScripts.push(`prettier --write ${docFiles.join(' ')}`);

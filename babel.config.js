@@ -9,14 +9,14 @@ module.exports = function (api) {
         // polyfill 操作方式
         useBuiltIns: 'usage',
         // 声明corejs版本
-        corejs: '3',
-      },
-    ],
+        corejs: '3'
+      }
+    ]
   ];
   const plugins = [];
 
   return {
     presets,
-    plugins,
+    plugins
   };
 };

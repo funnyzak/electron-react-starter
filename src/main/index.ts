@@ -14,8 +14,8 @@ function createWindow() {
     movable: true,
     webPreferences: {
       nodeIntegration: true,
-      contextIsolation: false,
-    },
+      contextIsolation: false
+    }
   });
 
   const devMode = process.env.NODE_ENV === 'development';

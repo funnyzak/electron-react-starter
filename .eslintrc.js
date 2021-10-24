@@ -7,11 +7,11 @@ module.exports = {
     jest: true,
     mocha: true,
     amd: true,
-    serviceworker: true,
+    serviceworker: true
   },
   globals: {
     PRODUCTION: 'readonly',
-    NODE_ENV: 'readonly',
+    NODE_ENV: 'readonly'
   },
   extends: ['eslint:recommended', 'plugin:react/recommended', 'airbnb'],
   plugins: [
@@ -20,21 +20,21 @@ module.exports = {
     'import',
     'jsx-a11y',
     '@typescript-eslint',
-    'html',
+    'html'
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
-      jsx: true,
+      jsx: true
     },
     jsxPragma: 'React',
     ecmaVersion: 'latest',
     projectFolderIgnoreList: ['**/node_modules/**'],
-    sourceType: 'module',
+    sourceType: 'module'
   },
   rules: {
     'semi': ['error', 'always'],
-    'comma-dangle': ['error', 'always-multiline'],
+    'comma-dangle': ['error', 'never'],
     'func-names': 'off',
     'import/no-unresolved': 'off',
     'import/no-extraneous-dependencies': 'off',
@@ -52,8 +52,8 @@ module.exports = {
     'react/jsx-filename-extension': [
       'warn',
       {
-        extensions: ['.js', '.jsx', '.ts', '.tsx'],
-      },
-    ],
-  },
+        extensions: ['.js', '.jsx', '.ts', '.tsx']
+      }
+    ]
+  }
 };

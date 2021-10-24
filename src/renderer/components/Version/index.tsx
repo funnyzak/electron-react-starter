@@ -6,7 +6,7 @@ const Index: React.FC = () => {
   const [chromeVersion, nodeVersion, electronVersion] = [
     'chrome',
     'node',
-    'electron',
+    'electron'
   ].map((v) => process.versions[v]);
   return (
     <div className="hello">
