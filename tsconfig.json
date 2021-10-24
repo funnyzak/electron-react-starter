@@ -20,7 +20,7 @@
         // 不允许对同一个文件使用不一致格式的引用
         "forceConsistentCasingInFileNames": true,
         // 生成相应的.d.ts文件
-        "declaration": true,
+        "declaration": false,
         // 只编译修改过的文件,这个时候会生成tsconfig.tsbuildinfo,下次编译的时候会进行对比只编译修改过的文件
         "incremental": true,
         "jsx": "react",
