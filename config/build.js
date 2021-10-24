@@ -13,10 +13,11 @@ delete rendererWebpackConfig.devtool
 function buildMain() {
   return new Promise((resolve, reject) => {
     const compiler = Webpack(mainWebpackConfig)
-    compiler.watch({}, (err) => {
+    compiler.watch({}, (err, stats) => {
       if (err) {
         reject(err)
       }
+      console.log('main process:', stats)
       resolve()
     })
   })
@@ -24,10 +25,11 @@ function buildMain() {
 function buildRenderer() {
   return new Promise((resolve, reject) => {
     const compiler = Webpack(rendererWebpackConfig)
-    compiler.watch({}, (err) => {
+    compiler.watch({}, (err, stats) => {
       if (err) {
         reject(err)
       }
+      console.log('renderer process:', stats)
       resolve()
     })
   })

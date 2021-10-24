@@ -31,6 +31,7 @@ const gitInfo = {
 
 // 模板参数，应用 index.html、hbs文件
 const templateParameters = {
+  nowTimeString: new Date().toISOString(),
   // package.json信息
   package,
   // 配置信息
@@ -46,7 +47,7 @@ templateParameters.origin = JSON.stringify(templateParameters)
 
 module.exports = {
   mode: process.env.NODE_ENV || 'production',
-  context: path.join(__dirname, '../src/renderer'),
+  context: path.join(__dirname, '../'),
   entry: {
     main: path.resolve(__dirname, '../src/renderer/index.tsx'),
   },
@@ -61,7 +62,7 @@ module.exports = {
         type: 'asset/resource',
         exclude: /node_modules/,
         generator: {
-          filename: 'static/[hash][ext][query]',
+          filename: 'static/[name].[hash][ext][query]',
         },
       },
       {
@@ -123,7 +124,7 @@ module.exports = {
     chunkFilename: '[id].chunk.js',
 
     // 该选项的值是以 runtime(运行时) 或 loader(载入时) 所创建的每个 URL 为前缀。因此，在多数情况下，此选项的值都会以 / 结束。
-    publicPath: '/',
+    publicPath: '', // 使用相对路径
   },
 
   plugins: [
@@ -135,19 +136,33 @@ module.exports = {
       PRODUCTION: process.env.NODE_ENV === 'production',
     }),
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, '../src/renderer/index.html'),
+      template: path.resolve(__dirname, '../public/index.html'),
       templateParameters: {
         ...templateParameters,
       },
     }),
     // 复制public下资源到dist目录
+    // 复制public下资源到dist目录
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: path.resolve(__dirname, '../public'),
+          context: 'public',
+          from: '**/*',
           to: path.resolve(__dirname, `../${config.distOutPutPath}`),
+          force: true,
+          priority: 10,
+          globOptions: {
+            dot: true,
+            gitignore: true,
+            ignore: [
+              '**/*.DS_Store',
+              '**/public/_docs/**/*',
+              '**/public/index.html',
+            ],
+          },
         },
       ],
+      options: { concurrency: 50 },
     }),
   ],
   resolve: {
