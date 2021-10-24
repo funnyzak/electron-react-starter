@@ -18,9 +18,11 @@ module.exports = {
     ],
   },
   resolve: {
-    plugins: [new TsconfigPathsPlugin({
-      extensions: ['.ts', '.tsx'],
-    })],
+    plugins: [
+      new TsconfigPathsPlugin({
+        extensions: ['.ts', '.tsx'],
+      }),
+    ],
   },
   output: {
     path: path.resolve(process.cwd(), config.distOutPutPath),

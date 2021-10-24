@@ -1,8 +1,8 @@
 import React from 'react'
 
 interface IProps {
-  name: string;
-  enthusiasmLevel?: number;
+    name: string
+    enthusiasmLevel?: number
 }
 
 const Index: React.FC<IProps> = (props) => {

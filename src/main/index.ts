@@ -1,6 +1,4 @@
-import {
-  app, BrowserWindow,
-} from 'electron'
+import { app, BrowserWindow } from 'electron'
 
 const config = require('@/config')
 
@@ -21,7 +19,9 @@ function createWindow() {
   })
 
   const devMode = process.env.NODE_ENV === 'development'
-  const winURL = devMode ? `http://${config.devServiceConfig.host}:${config.devServiceConfig.port}` : `file://${__dirname}/index.html`
+  const winURL = devMode
+    ? `http://${config.devServiceConfig.host}:${config.devServiceConfig.port}`
+    : `file://${__dirname}/index.html`
   browerWindow.loadURL(winURL)
 
   if (devMode) {

@@ -6,9 +6,11 @@ function delDirPath(path) {
     files = fs.readdirSync(path)
     files.forEach((file) => {
       const curPath = `${path}/${file}`
-      if (fs.statSync(curPath).isDirectory()) { // recurse
+      if (fs.statSync(curPath).isDirectory()) {
+        // recurse
         delDirPath(curPath)
-      } else { // delete file
+      } else {
+        // delete file
         fs.unlinkSync(curPath)
       }
     })
