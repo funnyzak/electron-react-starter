@@ -45,7 +45,8 @@ module.exports = {
     'no-plusplus': 'off',
     camelcase: 'off',
     'import/extensions': 'off',
-    'no-use-before-define': 'warn',
+    'no-use-before-define': 'off',
+    '@typescript-eslint/no-use-before-define': ['error'],
     'react/jsx-filename-extension': [
       'warn',
       {
