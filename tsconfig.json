@@ -8,7 +8,7 @@
         "allowJs": true,
         /* 是否检测JS的语法 */
         "checkJs": false,
-        "target": "es6",
+        "target": "es2017",
         // null类型检测,const teacher: string = null;会报错
         "strictNullChecks": true,
         // 对函数参数进行严格逆变比较
