@@ -39,7 +39,7 @@ function main() {
   delDirPath(path.resolve(__dirname, `../${config.distOutPutPath}`))
 
   Promise.all([buildMain(), buildRenderer()]).then(() => {
-    console.log('starting build your app')
+    console.log('build app done.')
     process.exit()
   })
 }
