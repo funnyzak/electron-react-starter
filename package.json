@@ -52,6 +52,7 @@
         "eslint-plugin-react": "^7.26.1",
         "eslint-plugin-react-hooks": "^4.2.0",
         "git-revision-webpack-plugin": "^5.0.0",
+        "handlebars": "^4.7.7",
         "html-loader": "^2.1.2",
         "html-webpack-plugin": "^5.4.0",
         "husky": "^7.0.4",
