@@ -15,11 +15,11 @@ const devServiceConfig = {
     // example: /api2/login => http://localhost:3000/api2/login
     // '/api2': 'http://localhost:3001',
   },
-}
+};
 
 module.exports = {
   devServiceConfig,
 
   // 源打包输出路径
   distOutPutPath: 'dist',
-}
+};

@@ -33,19 +33,21 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
-    semi: ['error', 'never'],
+    'semi': ['error', 'always'],
+    'comma-dangle': ['error', 'always-multiline'],
     'func-names': 'off',
-    'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'warn',
-    'react/react-in-jsx-scope': 'off',
     'import/no-unresolved': 'off',
     'import/no-extraneous-dependencies': 'off',
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-plusplus': 'off',
-    camelcase: 'off',
+    'camelcase': 'off',
     'import/extensions': 'off',
     'no-use-before-define': 'off',
+    'no-var-requires': 'off',
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
+    'react/react-in-jsx-scope': 'off',
     '@typescript-eslint/no-use-before-define': ['error'],
     'react/jsx-filename-extension': [
       'warn',
@@ -54,4 +56,4 @@ module.exports = {
       },
     ],
   },
-}
+};

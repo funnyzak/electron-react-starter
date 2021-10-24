@@ -1,13 +1,13 @@
-import React from 'react'
+import React from 'react';
 
-import './index.scss'
+import './index.scss';
 
 const Index: React.FC = () => {
   const [chromeVersion, nodeVersion, electronVersion] = [
     'chrome',
     'node',
     'electron',
-  ].map((v) => process.versions[v])
+  ].map((v) => process.versions[v]);
   return (
     <div className="hello">
       We are using Node.js
@@ -18,6 +18,6 @@ const Index: React.FC = () => {
       <span className="version">{electronVersion}</span>
       .
     </div>
-  )
-}
-export default Index
+  );
+};
+export default Index;
