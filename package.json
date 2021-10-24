@@ -1,7 +1,7 @@
 {
-    "name": "electron-react-typescript-webpack",
+    "name": "electron-react-quick-start",
     "version": "1.0.0",
-    "description": "electron-react-typescript-webpack",
+    "description": "electron-react-quick-start",
     "main": "dist/main.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
@@ -17,7 +17,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/funnyzak/electron-react-typescript-webpack.git"
+        "url": "git+https://github.com/funnyzak/electron-react-quick-start.git"
     },
     "keywords": [
         "electron",
@@ -28,9 +28,9 @@
     "author": "funnyzak <silenceace@gmail.com>",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/funnyzak/electron-react-typescript-webpack/issues"
+        "url": "https://github.com/funnyzak/electron-react-quick-start/issues"
     },
-    "homepage": "https://github.com/funnyzak/electron-react-typescript-webpack#readme",
+    "homepage": "https://github.com/funnyzak/electron-react-quick-start#readme",
     "devDependencies": {
         "@babel/core": "^7.15.8",
         "@babel/preset-env": "^7.15.8",

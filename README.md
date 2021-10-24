@@ -1,10 +1,10 @@
-# Electron React Typescript Webpack
+# Electron React Quick Start
 
 ## 说明
 
 基于 React Typescript Webpack 构建 Electron 应用脚手架。
 
--   babel 语法支持
+-   babel 转换支持
 -   typescript 支持
 -   react 支持
 -   sass 支持
@@ -62,7 +62,7 @@
 
 ## 其他
 
-点击这里访问 [基于 typescript 和 webapck 的 React 脚手架应用](https://github.com/funnyzak/react-typescript-webpack-template)。
+点击这里访问 [基于 typescript 和 webapck 的 React 脚手架应用](https://github.com/funnyzak/react-typescript-quick-start)。
 
 ## 参考
 
