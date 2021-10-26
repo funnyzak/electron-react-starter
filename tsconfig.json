@@ -56,8 +56,7 @@
     "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
     "paths": {
       "@/*": ["./src/*"],
-      "@/package": ["./package.json"],
-      "@/config": ["./config/index.js"]
+      "@/package": ["./package.json"]
     }
   },
   "exclude": [

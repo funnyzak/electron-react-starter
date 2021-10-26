@@ -1,6 +1,6 @@
 import { app, protocol, BrowserWindow } from 'electron';
 
-const config = require('@/config');
+const config = require('../config');
 
 let win: BrowserWindow;
 const isDevelopment = process.env.NODE_ENV === 'development';
