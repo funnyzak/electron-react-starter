@@ -19,7 +19,7 @@
 
 ## 环境
 
-使用的 Node 的构建版本为 **^14.17.**，为避免冲突，建议使用此版本。可以使用 **_nvm_** 管理 Node 版本。
+使用的 Node 的构建版本为 **^14.17.5**，为避免冲突，建议使用此版本。可以使用 **_nvm_** 管理 Node 版本。
 
 主要依赖库版本：
 
@@ -40,7 +40,6 @@
 - `config`：webpack 打包配置
 - `config/index.js`: 常用配置, edit here
 - `src/background.ts`：electron main ，code here
-- `src/renderer`：renderer src, code here
 
 ## 使用
 

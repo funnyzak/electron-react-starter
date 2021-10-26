@@ -49,7 +49,7 @@ module.exports = {
   mode: process.env.NODE_ENV || 'production',
   context: path.join(__dirname, '../'),
   entry: {
-    main: path.resolve(__dirname, '../src/renderer/index.tsx')
+    main: path.resolve(__dirname, '../src/index.tsx')
   },
   devtool: 'source-map',
   // https://webpack.js.org/configuration/stats/
@@ -94,7 +94,7 @@ module.exports = {
         exclude: /node_modules/
       },
       {
-        test: /src\/renderer\/[^\s]+\.js$/i, // src/renderer 下所有js
+        test: /src\/[^\s]+\.js$/i, // src/renderer 下所有js
         use: ['babel-loader'],
         exclude: /node_modules/
       },
@@ -167,7 +167,7 @@ module.exports = {
   ],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, '../src/renderer/')
+      '@': path.resolve(__dirname, '../src/')
     },
     // 支持Tsconfig paths
     plugins: [
