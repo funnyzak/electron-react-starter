@@ -84,6 +84,7 @@
     "appId": "github.funnyzak.electron",
     "productName": "electron app",
     "copyright": "copyright © 2021 eric ",
+    "asar": true,
     "files": [
       "dist/**/*"
     ],
@@ -94,8 +95,28 @@
       "icon": "public/icon/128x128.icns",
       "category": "Utility"
     },
+    "nsis": {
+      "oneClick": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "public/icon/256x256.ico",
+      "uninstallerIcon": "public/icon/256x256.ico",
+      "installerHeaderIcon": "public/icon/256x256.ico",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "electron quick start"
+    },
     "win": {
-      "icon": "public/icon/256x256.ico"
+      "icon": "public/icon/256x256.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ]
     },
     "linux": {
       "target": "zip",

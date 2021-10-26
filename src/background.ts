@@ -24,15 +24,15 @@ function createWindow() {
     }
   });
 
-  const winURL = isDevelopment
-    ? `http://${config.devServiceConfig.host}:${config.devServiceConfig.port}`
-    : 'app://./index.html';
-
-  win.loadURL(winURL);
-
   if (isDevelopment) {
+    win.loadURL(
+      `http://${config.devServiceConfig.host}:${config.devServiceConfig.port}`
+    );
     win.resizable = true;
     win.webContents.openDevTools();
+  } else {
+    // Load the index.html when not in development
+    win.loadURL(`file://${__dirname}/index.html`);
   }
 }
 
