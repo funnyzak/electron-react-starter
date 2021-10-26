@@ -39,7 +39,7 @@
 - `public`：静态资源文件夹
 - `config`：webpack 打包配置
 - `config/index.js`: 常用配置, edit here
-- `src/main`：electron main 进程文件，code here
+- `src/background.ts`：electron main ，code here
 - `src/renderer`：renderer src, code here
 
 ## 使用

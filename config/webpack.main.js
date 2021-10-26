@@ -5,7 +5,7 @@ const config = require('.');
 module.exports = {
   mode: process.env.NODE_ENV || 'production',
   entry: {
-    main: path.resolve(process.cwd(), 'src/main/index.ts')
+    main: path.resolve(process.cwd(), 'src/background.ts')
   },
   stats: 'errors-only',
   module: {

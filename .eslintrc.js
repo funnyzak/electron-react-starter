@@ -32,7 +32,6 @@ module.exports = {
     projectFolderIgnoreList: ['**/node_modules/**'],
     sourceType: 'module'
   },
-  rules: {
     rules: {
       'semi': ['error', 'always'],
       'comma-dangle': ['error', 'never'],
@@ -85,4 +84,5 @@ module.exports = {
         }
       ]
     }
-  };
+  
+}
