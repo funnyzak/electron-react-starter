@@ -1,4 +1,3 @@
-import React from 'react';
 import * as ReactDOM from 'react-dom';
 
 import { Hello, Version, Image } from './components';

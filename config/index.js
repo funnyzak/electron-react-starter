@@ -4,7 +4,7 @@ const devServiceConfig = {
   client: {
     overlay: true
   },
-  port: 2088,
+  port: 2085,
   // 代理设置
   proxy: {
     // example: /api/login => http://localhost:3000/login
