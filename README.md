@@ -34,6 +34,14 @@
 - webpack: ^5.59.1
 - prettier: 2.4.1
 
+### UI/组件：
+
+- [antd](https://ant.design/docs/react/introduce-cn)
+- [@ant-design/icons](https://ant.design/components/icon/)
+- [react-icons](https://github.com/react-icons/react-icons)
+- [normalize.css](https://necolas.github.io/normalize.css/)
+- [styled-components](https://styled-components.com/docs/basics)
+
 ## 目录
 
 - `public`：静态资源文件夹

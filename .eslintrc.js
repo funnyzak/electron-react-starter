@@ -74,6 +74,10 @@ module.exports = {
     "no-else-return": 2,//如果if语句里面有return,后面不能跟else语句
     'quote-props': ['warn', 'consistent'],
     "react/jsx-uses-react": "off",
+    // 定义未使用
+    'no-unused-vars': 0,
+    // image元素必须有alt标签
+    'jsx-a11y/alt-text': 0,
     "react/react-in-jsx-scope": "off",
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
