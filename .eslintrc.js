@@ -77,9 +77,14 @@ module.exports = {
     "react/jsx-uses-react": "off",
     // 定义未使用
     'no-unused-vars': 0,
+    // 导入多次
+    "import/no-duplicates": 0,
     // image元素必须有alt标签
     'jsx-a11y/alt-text': 0,
-    "@emotion/jsx-import": "warn",
+    "@emotion/jsx-import": "off",
+    "@emotion/no-vanilla": "warn",
+    "@emotion/import-from-emotion": "off",
+    "@emotion/styled-import": "warn",
     "react/react-in-jsx-scope": "off",
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
