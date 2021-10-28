@@ -20,7 +20,7 @@ const gitRevisionPlugin = new GitRevisionPlugin({
 });
 
 const package = require('../package.json');
-const config = require('.');
+const config = require('../app.config');
 
 const gitInfo = {
   VERSION: gitRevisionPlugin.version(),
@@ -113,7 +113,7 @@ module.exports = {
     ]
   },
   output: {
-    path: path.resolve(__dirname, `../${config.distOutPutPath}`),
+    path: path.resolve(__dirname, `../${config.distOutPut}`),
     // assetModuleFilename: 'assets/[hash][ext][query]',
 
     // entry file output name
@@ -148,7 +148,7 @@ module.exports = {
         {
           context: 'public',
           from: '**/*',
-          to: path.resolve(__dirname, `../${config.distOutPutPath}`),
+          to: path.resolve(__dirname, `../${config.distOutPut}`),
           force: true,
           priority: 10,
           globOptions: {
