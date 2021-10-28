@@ -11,12 +11,9 @@ export default () => (
     <Image src={avatarImg} />
     <Avatar size={64} icon={<UserOutlined />} />
     <h3>
-      {' '}
       Lets go for a
-      {' '}
       <FaBeer />
       ?
-      {' '}
     </h3>
     <Version />
     <div>

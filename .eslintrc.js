@@ -13,14 +13,15 @@ module.exports = {
     PRODUCTION: 'readonly',
     NODE_ENV: 'readonly'
   },
-  extends: ['eslint:recommended', 'plugin:react/recommended', 'airbnb', '@emotion'],
+  extends: ['eslint:recommended', 'plugin:react/recommended', 'airbnb'],
   plugins: [
     'react',
     'react-hooks',
     'import',
     'jsx-a11y',
     '@typescript-eslint',
-    'html'
+    'html',
+    '@emotion'
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
