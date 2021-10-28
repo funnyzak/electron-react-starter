@@ -79,6 +79,7 @@ module.exports = {
     'no-unused-vars': 0,
     // image元素必须有alt标签
     'jsx-a11y/alt-text': 0,
+    "@emotion/jsx-import": "warn",
     "react/react-in-jsx-scope": "off",
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
