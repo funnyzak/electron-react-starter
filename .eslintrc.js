@@ -11,7 +11,8 @@ module.exports = {
   },
   globals: {
     PRODUCTION: 'readonly',
-    NODE_ENV: 'readonly'
+    NODE_ENV: 'readonly',
+    APP: 'readonly'
   },
   extends: ['eslint:recommended', 'plugin:react/recommended', 'airbnb'],
   plugins: [
@@ -34,6 +35,8 @@ module.exports = {
     sourceType: 'module'
   },
   rules: {
+    // 代码长度
+    'max-len': ["error", { "code": 200, "ignoreComments": true, "ignoreUrls": true, "ignoreTemplateLiterals": true }],
     'semi': ['error', 'always'],
     'comma-dangle': ['error', 'never'],
     'func-names': 'off',
@@ -55,7 +58,7 @@ module.exports = {
     // http://eslint.org/docs/rules/comma-style
     "comma-style": [2, "last"],
     // 圈复杂度
-    "complexity": [2, 9],
+    "complexity": [2, 12],
     // 文件末尾强制换行
     "eol-last": 2,
     // 方法表达式是否需要命名
@@ -74,20 +77,42 @@ module.exports = {
     "no-duplicate-case": 2,//switch中的case标签不能重复
     "no-else-return": 2,//如果if语句里面有return,后面不能跟else语句
     'quote-props': ['warn', 'consistent'],
-    "react/jsx-uses-react": "off",
     // 定义未使用
-    'no-unused-vars': 0,
+    'no-unused-vars': 'off',
+    // 禁止使用 for..in  for..of
+    "no-restricted-syntax": 1,
+    // 禁止标识符下划线
+    'no-underscore-dangle': 'off',
     // 导入多次
     "import/no-duplicates": 0,
+    "import/prefer-default-export": 0,
+    // 禁止promise 使用async
+    "no-async-promise-executor": 0,
     // image元素必须有alt标签
     'jsx-a11y/alt-text': 0,
+    // 变量作用域
+    "no-shadow": "off",
+    // 不允许嵌套的三元表达式
+    "no-nested-ternary": "off",
+    "no-await-in-loop": "off",
+    // 对象/数组 解构
+    "prefer-destructuring": ["error", {
+      "array": true,
+      "object": true
+    }, {
+        "enforceForRenamedProperties": false
+      }],
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/no-shadow": "error",
     "@emotion/jsx-import": "off",
     "@emotion/no-vanilla": "warn",
     "@emotion/import-from-emotion": "off",
     "@emotion/styled-import": "warn",
+    "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",
     'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'warn',
+    'react-hooks/exhaustive-deps': 'off',
+    'react/require-default-props': 'off',
     '@typescript-eslint/no-use-before-define': ['warn'],
     'react/jsx-filename-extension': [
       'warn',
