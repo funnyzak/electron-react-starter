@@ -49,8 +49,16 @@ function createWindow() {
   // 禁止页面不可见时停止计时器。防止setTimeout问题
   win.webContents.setBackgroundThrottling(false);
 
+  // 禁止网页缓存
+  const winOptions = {
+    extraHeaders: 'pragma: no-cache\n'
+  };
+
   if (isDevelopment) {
-    win.loadURL(`http://${config.devServer.host}:${config.devServer.port}`);
+    win.loadURL(
+      `http://${config.devServer.host}:${config.devServer.port}`,
+      winOptions
+    );
     win.resizable = true;
     win.webContents.openDevTools();
   } else {
