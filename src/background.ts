@@ -157,7 +157,7 @@ const menuTemplate: any = [
         label: '下载新版',
         click: async () => {
           await shell.openExternal(
-            'https://github.com/funnyzak/aliyun-tts-assastant/releases'
+            'https://github.com/funnyzak/electron-react-quick-start/releases'
           );
         }
       },
