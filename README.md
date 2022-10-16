@@ -1,8 +1,27 @@
 # Electron React Starter
 
-## 说明
-
 基于 React Typescript Webpack 构建 Electron 应用脚手架。
+
+[![Build Status][build-status-image]][build-status]
+[![tag][tag-image]][rle-url]
+[![Release Date][rle-image]][rle-url]
+[![license][license-image]][repository-url]
+<!-- [![Latest Release Download][down-latest-image]][rle-url] -->
+<!-- [![Total Download][down-total-image]][rle-all-url] -->
+<!-- [![action][ci-image]][ci-url] -->
+
+[down-latest-image]: https://img.shields.io/github/downloads/funnyzak/electron-react-starter/latest/total.svg
+[down-total-image]: https://img.shields.io/github/downloads/funnyzak/electron-react-starter/total.svg
+[rle-image]: https://img.shields.io/github/release-date/funnyzak/electron-react-starter.svg
+[rle-url]: https://github.com/funnyzak/electron-react-starter/releases/latest
+[rle-all-url]: https://github.com/funnyzak/electron-react-starter/releases
+[ci-image]: https://img.shields.io/github/workflow/status/funnyzak/electron-react-starter/release
+[ci-url]: https://github.com/funnyzak/electron-react-starter/actions
+[license-image]: https://img.shields.io/github/license/funnyzak/electron-react-starter.svg?style=flat-square
+[repository-url]: https://github.com/funnyzak/electron-react-starter
+[build-status-image]: https://github.com/funnyzak/electron-react-starter/actions/workflows/ci.yml/badge.svg
+[build-status]: https://github.com/funnyzak/electron-react-starter/actions
+[tag-image]: https://img.shields.io/github/tag/funnyzak/electron-react-starter.svg
 
 ## 特点
 
@@ -19,19 +38,21 @@
 
 ![run](public/_docs/assets/img/run-demo.jpg)
 
-## 环境
+## 依赖
 
 主要依赖库：
 
-- electron: ^21.1.1
-- electron-builder: ^23.6.0
-- eslint: ^8.25.0
-- babel: ^7.19.0
-- typescript: ^4.8.4
-- webpack: ^5.74.0
-- prettier: 2.4.1
+- electron-builder
+- eslint
+- babel
+- css-loader
+- less
+- sass
+- typescript
+- webpack
+- prettier
 
-### UI/组件
+## 组件
 
 - [antd](https://ant.design/docs/react/introduce-cn)
 - [@ant-design/icons](https://ant.design/components/icon/)
@@ -42,33 +63,84 @@
 
 ## 目录
 
-- `app.config.js`: app 基础配置
-- `electron.builder.js`: 打包配置
-- `public`：静态资源文件夹
-- `config`：webpack 打包配置
-- `src/background.ts`：electron main ，code here
+    ├── app.config.js                      // 基础配置
+    ├── babel.config.js                    // babel 配置
+    ├── build                              // 打包输出文件夹
+    │   ├── binary                         // 二进制打包输出
+    │   └── bundle                         // renderer main打包源输出
+    ├── config                             // 打包配置
+    │   ├── dev.js                         // 开发监听启动
+    │   ├── dist.js                        // 发布打包源
+    │   ├── webpack.main.js                // background 编译
+    │   └── webpack.renderer.js            // renderer 编译
+    ├── electron.builder.js                // electron.builder 二进制打包配置
+    ├── global.d.ts                        // typescript 全局声明
+    ├── lint-staged.config.js              // git commit 钩子
+    ├── public                             // 静态文件
+    ├── src                                // 页面源
+    │   ├── App.less                       // 入口样式
+    │   ├── assets                         // 资源文件
+    │   ├── background.ts                  // electron background
+    │   ├── config                         // 应用配置
+    │   ├── hook                           // hook
+    │   ├── index.tsx                      // entry file
+    │   ├── layout                         // 布局
+    │   ├── type                           // 声明文件
+    │   └── utils                          // 工具
+    └── tsconfig.json                      // typescript 配置
+    └── tslint.json                        // tslint 配置
 
-## 使用
+## 开发
 
-执行：`yarn install` or `npm install`，然后：
+安装依赖先
 
-- 开发服务启动：`yarn serve`
-- Lint 格式化：`yarn lint`
-- 源构建输出：`yarn dist`
-- 根据当前系统构建：`yarn build`
-- 基于 dist 输出，根据当前系统构建：`yarn build:now`
-- 构建 Windows 二进制：`yarn build:windows`
-- 构建 Mac 二进制：`yarn build:mac`
-- 构建 Linux 二进制：`yarn build:linux`
+```bash
+$ yarn
+```
 
-## 输出
+然后可执行如下脚本命令：
 
-- 源构建输出：`./build/bundle`
-- 打包输出目录：`./build/binary`
+```bash
+# 开发服务启动
+$ yarn serve
+
+# Lint 格式化
+$ yarn lint
+
+# 源构建输出
+$ yarn dist
+
+# 根据当前系统构建
+$ yarn build
+
+# 基于 dist 输出，根据当前系统构建
+$ yarn build:now
+
+# 构建 Windows 二进制
+$ yarn build:windows
+
+# 构建 Mac 二进制
+$ yarn build:mac
+
+# 构建 Linux 二进制
+$ yarn build:linux
+
+# 构建三平台
+$ yarn build:all
+
+```
+
+## Contribution
+
+如果你有任何的想法或者意见，欢迎提 Issue 或者 PR。
+
+<a href="https://github.com/funnyzak/electron-react-starter/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=funnyzak/electron-react-starter" />
+</a>
 
 ## 其他
 
-点击这里访问 [基于 typescript 和 webapck 的 React 脚手架应用](https://github.com/funnyzak/react-typescript-quick-start)。
+点击这里访问 [基于 typescript 和 webapck 的 React 脚手架应用](https://github.com/funnyzak/react-starter)。
 
 ## 参考
 
