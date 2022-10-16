@@ -76,7 +76,7 @@ $ yarn build:all
 
 ### 预览
 
-![run](https://raw.githubusercontent.com/funnyzak/react-starter/main/public/_docs/assets/img/preview.png)
+![run](https://raw.githubusercontent.com/funnyzak/electron-react-starter/main/public/_docs/preview.png)
 
 ## 依赖
 
