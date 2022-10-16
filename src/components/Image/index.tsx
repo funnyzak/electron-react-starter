@@ -1,4 +1,4 @@
-import React, { CSSProperties } from 'react';
+import React, { CSSProperties } from 'react'
 
 interface IProps {
   src: string;
@@ -6,13 +6,13 @@ interface IProps {
 }
 
 const Index: React.FC<IProps> = (props) => {
-  const { src, styleSet } = props;
+  const { src, styleSet } = props
 
-  return <img src={src} style={styleSet} alt="img" />;
-};
+  return <img src={src} style={styleSet} alt="img" />
+}
 
 Index.defaultProps = {
   styleSet: { width: '64px', height: 'auto' }
-};
+}
 
-export default Index;
+export default Index
