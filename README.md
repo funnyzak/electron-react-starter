@@ -34,62 +34,6 @@
 - png|svg|jpg|jpeg|gif 引入支持
 - git commit hooks, no 💩
 
-### 预览
-
-![run](public/_docs/assets/img/run-demo.jpg)
-
-## 依赖
-
-主要依赖库：
-
-- electron-builder
-- eslint
-- babel
-- css-loader
-- less
-- sass
-- typescript
-- webpack
-- prettier
-
-## 组件
-
-- [antd](https://ant.design/docs/react/introduce-cn)
-- [@ant-design/icons](https://ant.design/components/icon/)
-- [react-icons](https://github.com/react-icons/react-icons)
-- [normalize.css](https://necolas.github.io/normalize.css/)
-- [@emotion/react](https://emotion.sh/docs/introduction)
-- [@emotion/styled](https://emotion.sh/docs/introduction)
-
-## 目录
-
-    ├── app.config.js                      // 基础配置
-    ├── babel.config.js                    // babel 配置
-    ├── build                              // 打包输出文件夹
-    │   ├── binary                         // 二进制打包输出
-    │   └── bundle                         // renderer main打包源输出
-    ├── config                             // 打包配置
-    │   ├── dev.js                         // 开发监听启动
-    │   ├── dist.js                        // 发布打包源
-    │   ├── webpack.main.js                // background 编译
-    │   └── webpack.renderer.js            // renderer 编译
-    ├── electron.builder.js                // electron.builder 二进制打包配置
-    ├── global.d.ts                        // typescript 全局声明
-    ├── lint-staged.config.js              // git commit 钩子
-    ├── public                             // 静态文件
-    ├── src                                // 页面源
-    │   ├── App.less                       // 入口样式
-    │   ├── assets                         // 资源文件
-    │   ├── background.ts                  // electron background
-    │   ├── config                         // 应用配置
-    │   ├── hook                           // hook
-    │   ├── index.tsx                      // entry file
-    │   ├── layout                         // 布局
-    │   ├── type                           // 声明文件
-    │   └── utils                          // 工具
-    └── tsconfig.json                      // typescript 配置
-    └── tslint.json                        // tslint 配置
-
 ## 开发
 
 安装依赖先
@@ -130,13 +74,58 @@ $ yarn build:all
 
 ```
 
-## Contribution
+### 预览
 
-如果你有任何的想法或者意见，欢迎提 Issue 或者 PR。
+![run](https://raw.githubusercontent.com/funnyzak/react-starter/main/public/_docs/assets/img/preview.png)
 
-<a href="https://github.com/funnyzak/electron-react-starter/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=funnyzak/electron-react-starter" />
-</a>
+## 依赖
+
+主要依赖库：
+
+- electron-builder
+- eslint
+- babel
+- css-loader
+- less
+- sass
+- typescript
+- webpack
+- prettier
+- [antd](https://ant.design/docs/react/introduce-cn)
+- [@ant-design/icons](https://ant.design/components/icon/)
+- [react-icons](https://github.com/react-icons/react-icons)
+- [normalize.css](https://necolas.github.io/normalize.css/)
+- [@emotion/react](https://emotion.sh/docs/introduction)
+- [@emotion/styled](https://emotion.sh/docs/introduction)
+
+## 目录
+
+    ├── app.config.js                      // 基础配置
+    ├── babel.config.js                    // babel 配置
+    ├── build                              // 打包输出文件夹
+    │   ├── binary                         // 二进制打包输出
+    │   └── bundle                         // renderer main打包源输出
+    ├── config                             // 打包配置
+    │   ├── dev.js                         // 开发监听启动
+    │   ├── dist.js                        // 发布打包源
+    │   ├── webpack.main.js                // background 编译
+    │   └── webpack.renderer.js            // renderer 编译
+    ├── electron.builder.js                // electron.builder 二进制打包配置
+    ├── global.d.ts                        // typescript 全局声明
+    ├── lint-staged.config.js              // git commit 钩子
+    ├── public                             // 静态文件
+    ├── src                                // 页面源
+    │   ├── App.less                       // 入口样式
+    │   ├── assets                         // 资源文件
+    │   ├── background.ts                  // electron background
+    │   ├── config                         // 应用配置
+    │   ├── hook                           // hook
+    │   ├── index.tsx                      // entry file
+    │   ├── layout                         // 布局
+    │   ├── type                           // 声明文件
+    │   └── utils                          // 工具
+    └── tsconfig.json                      // typescript 配置
+    └── tslint.json                        // tslint 配置
 
 ## 其他
 
@@ -153,6 +142,14 @@ $ yarn build:all
 - [gitignore](https://git-scm.com/docs/gitignore)
 - [webpack](https://webpack.docschina.org/guides/getting-started/)
 - [prettier](https://prettier.io/docs/en/index.html)
+
+## Contribution
+
+如果你有任何的想法或者意见，欢迎提 Issue 或者 PR。
+
+<a href="https://github.com/funnyzak/electron-react-starter/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=funnyzak/electron-react-starter" />
+</a>
 
 ## License
 
