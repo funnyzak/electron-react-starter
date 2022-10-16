@@ -1,7 +1,7 @@
 {
-  "name": "electron-react-quick-start",
-  "version": "1.0.0",
-  "description": "electron-react-quick-start",
+  "name": "electron-react-starter",
+  "version": "1.1.0",
+  "description": "electron-react-starter",
   "main": "build/bundle/main.js",
   "scripts": {
     "nodev": "nvm install 14.17.0",
@@ -15,12 +15,14 @@
     "build:windows": "npm run dist && electron-builder build --config electron.builder.js --win",
     "build:mac": "npm run dist && electron-builder build --config electron.builder.js --mac",
     "build:linux": "npm run dist && electron-builder build --config electron.builder.js --linux",
-    "lint": "eslint --fix .",
+    "lint:fix": "eslint --fix .",
+    "lint:check": "eslint .",
+    "npm:check": "npm-check-updates",
     "prepare": "husky install"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/funnyzak/electron-react-quick-start.git"
+    "url": "git+https://github.com/funnyzak/electron-react-starter.git"
   },
   "keywords": [
     "electron",
@@ -31,9 +33,9 @@
   "author": "funnyzak <silenceace@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/funnyzak/electron-react-quick-start/issues"
+    "url": "https://github.com/funnyzak/electron-react-starter/issues"
   },
-  "homepage": "https://github.com/funnyzak/electron-react-quick-start#readme",
+  "homepage": "https://github.com/funnyzak/electron-react-starter#readme",
   "devDependencies": {
     "@babel/core": "^7.15.8",
     "@babel/preset-env": "^7.15.8",
@@ -66,6 +68,7 @@
     "lint-staged": "^11.2.3",
     "micromatch": "^4.0.4",
     "node-sass": "^6.0.1",
+    "npm-check-updates": "^16.3.11",
     "prettier": "2.4.1",
     "sass-loader": "^12.2.0",
     "source-map-loader": "^3.0.0",
@@ -79,14 +82,17 @@
   },
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
+    "@emotion/react": "^11.5.0",
+    "@emotion/styled": "^11.3.0",
     "antd": "^4.16.13",
     "core-js": "^3.18.3",
     "normalize.css": "^8.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
-    "@emotion/react": "^11.5.0",
-    "@emotion/styled": "^11.3.0",
     "typescript": "^4.4.4"
+  },
+  "engines": {
+    "node": ">= 16.0.0"
   }
 }
