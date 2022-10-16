@@ -1,8 +1,10 @@
-# Electron React Quick Start
+# Electron React Starter
 
 ## 说明
 
 基于 React Typescript Webpack 构建 Electron 应用脚手架。
+
+## 特点
 
 - babel 转换支持
 - typescript 支持
@@ -13,28 +15,23 @@
 - png|svg|jpg|jpeg|gif 引入支持
 - git commit hooks, no 💩
 
-### 运行
+### 预览
 
 ![run](public/_docs/assets/img/run-demo.jpg)
 
 ## 环境
 
-使用的 Node 的构建版本为 **^14.17.5**，为避免冲突，建议使用此版本。可以使用 **_nvm_** 管理 Node 版本。
+主要依赖库：
 
-主要依赖库版本：
-
-- electron: ^15.3.0
-- electron-builder: ^22.13.15
-- eslint: ^7.32.0
-- babel: ^7.15.8
-- css-loader: ^6.4.0
-- less: ^4.1.2
-- sass: ^6.0.1
-- typescript: ^4.4.4
-- webpack: ^5.59.1
+- electron: ^21.1.1
+- electron-builder: ^23.6.0
+- eslint: ^8.25.0
+- babel: ^7.19.0
+- typescript: ^4.8.4
+- webpack: ^5.74.0
 - prettier: 2.4.1
 
-### UI/组件：
+### UI/组件
 
 - [antd](https://ant.design/docs/react/introduce-cn)
 - [@ant-design/icons](https://ant.design/components/icon/)
@@ -55,16 +52,16 @@
 
 执行：`yarn install` or `npm install`，然后：
 
-- 开发服务启动：`npm run serve`
-- Lint 格式化：`npm run lint`
-- 源构建输出：`npm run dist`
-- 根据当前系统构建：`npm run build`
-- 基于 dist 输出，根据当前系统构建：`npm run build:now`
-- 构建 Windows 二进制：`npm run build:windows`
-- 构建 Mac 二进制：`npm run build:mac`
-- 构建 Linux 二进制：`npm run build:linux`
+- 开发服务启动：`yarn serve`
+- Lint 格式化：`yarn lint`
+- 源构建输出：`yarn dist`
+- 根据当前系统构建：`yarn build`
+- 基于 dist 输出，根据当前系统构建：`yarn build:now`
+- 构建 Windows 二进制：`yarn build:windows`
+- 构建 Mac 二进制：`yarn build:mac`
+- 构建 Linux 二进制：`yarn build:linux`
 
-## 打包
+## 输出
 
 - 源构建输出：`./build/bundle`
 - 打包输出目录：`./build/binary`
