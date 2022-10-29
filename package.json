@@ -84,7 +84,7 @@
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
     "@emotion/react": "^11.10.5",
-    "@emotion/styled": "^11.10.4",
+    "@emotion/styled": "^11.10.5",
     "antd": "^4.23.6",
     "core-js": "^3.26.0",
     "normalize.css": "^8.0.1",
