@@ -83,7 +83,7 @@
   },
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
-    "@emotion/react": "^11.10.4",
+    "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.4",
     "antd": "^4.23.6",
     "core-js": "^3.26.0",
